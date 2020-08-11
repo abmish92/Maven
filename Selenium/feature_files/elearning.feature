@@ -2,10 +2,10 @@
 Feature: To automate the Registration & To verify whether application allows teacher to add new course
   I want to use this template for my feature file
 
-  @Reg
-  Scenario: To verify whether admin can add the user
+  @Registration
+  Scenario: To verify whether administrator can add the user
     Given I launch the application
-    Then I entered the username "admin"
+    Then I entered the user name "admin"
     And I entered the password "admin@123"
     Then I click the submit button
     When I click on add user link
@@ -13,7 +13,7 @@ Feature: To automate the Registration & To verify whether application allows tea
     And I entered the last name
     And I entered the email id
     And I entered the phone number
-    And I entered Login credential textbox
+    And I entered Login credential text-box
     Then I select the password radio button
     And I entered the password for user
     And I  select the profile trainer
@@ -23,7 +23,7 @@ Feature: To automate the Registration & To verify whether application allows tea
 
 
 
-  @addingcourse
+  @addcourse
   Scenario: To verify whether application allows teacher to add new course
     Given I launch the learning application
     Then I entered the teacher login "teacher001"
@@ -36,7 +36,7 @@ Feature: To automate the Registration & To verify whether application allows tea
     And I entered the course code
     And I entered the language
     And I click on create a course button
-    Then I click on add add a introduction icon
+    Then I click on add add a intro icon
     And I entered the valid credential
     And I click save intro text
     Then Verification message

@@ -1,10 +1,10 @@
-package stepdefinations;
+package stepdefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import common.Wrapper;
+import Elearning.Selenium.Selenium;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,8 +16,7 @@ public class Excel_stepdefinations {
 
 	@Given("^I launch application$")
 	public void i_launch_application() throws Throwable {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\AbhishekMishra\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\AbhishekMishra\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 	}
@@ -46,27 +45,27 @@ public class Excel_stepdefinations {
 
 	@Then("^I enter first name$")
 	public void i_enter_first_name() throws Throwable {
-		driver.findElement(By.id("firstname")).sendKeys(Wrapper.getDataFromExcel(1, 0));
+		driver.findElement(By.id("firstname")).sendKeys(Selenium.getDataFromExcel(1, 0));
 	}
 
 	@Then("^I entered last name$")
 	public void i_entered_last_name() throws Throwable {
-		driver.findElement(By.name("lastname")).sendKeys(Wrapper.getDataFromExcel(1, 1));
+		driver.findElement(By.name("lastname")).sendKeys(Selenium.getDataFromExcel(1, 1));
 	}
 
 	@Then("^I entered email id$")
 	public void i_entered_email_id() throws Throwable {
-		driver.findElement(By.name("email")).sendKeys(Wrapper.getDataFromExcel(1, 2));
+		driver.findElement(By.name("email")).sendKeys(Selenium.getDataFromExcel(1, 2));
 	}
 
 	@Then("^I entered phone number$")
 	public void i_entered_phone_number() throws Throwable {
-		driver.findElement(By.xpath("//*[@id=\"phone\"]")).sendKeys(Wrapper.getDataFromExcel(1, 3));
+		driver.findElement(By.xpath("//*[@id=\"phone\"]")).sendKeys(Selenium.getDataFromExcel(1, 3));
 	}
 
 	@Then("^I entered the Login credential textbox$")
 	public void i_entered_the_Login_credential_textbox() throws Throwable {
-		driver.findElement(By.cssSelector("input[name=username]")).sendKeys(Wrapper.getDataFromExcel(1, 4));
+		driver.findElement(By.cssSelector("input[name=username]")).sendKeys(Selenium.getDataFromExcel(1, 4));
 	}
 
 	@Then("^I select password radio button$")
@@ -76,13 +75,13 @@ public class Excel_stepdefinations {
 
 	@Then("^I entered password for user$")
 	public void i_entered_password_for_user() throws Throwable {
-		driver.findElement(By.xpath("//*[@name=\"password[password]\"]")).sendKeys(Wrapper.getDataFromExcel(1, 5));
+		driver.findElement(By.xpath("//*[@name=\"password[password]\"]")).sendKeys(Selenium.getDataFromExcel(1, 5));
 	}
 
 	@Then("^I  select profile trainer$")
 	public void i_select_profile_trainer() throws Throwable {
 		driver.findElement(By.xpath("(//*[@class=\"filter-option\"])[1]")).click();
-		driver.findElement(By.xpath("(//input[@class='form-control'])[8]")).sendKeys(Wrapper.getDataFromExcel(1, 6));
+		driver.findElement(By.xpath("(//input[@class='form-control'])[8]")).sendKeys(Selenium.getDataFromExcel(1, 6));
 	}
 
 	@When("^I click add button$")
@@ -97,7 +96,7 @@ public class Excel_stepdefinations {
 
 	@Then("^Delete user$")
 	public void delete_user() throws Throwable {
-		driver.findElement(By.xpath("//*[@name='keyword']")).sendKeys(Wrapper.getDataFromExcel(1, 7));
+		driver.findElement(By.xpath("//*[@name='keyword']")).sendKeys(Selenium.getDataFromExcel(1, 7));
 		driver.findElement(By.xpath("(//*[@name='submit'])[1]")).click();
 		driver.findElement(By.xpath("//*[@alt='Delete']")).click();
 		driver.switchTo().alert().accept();
@@ -105,8 +104,7 @@ public class Excel_stepdefinations {
 
 	@Given("^I have launch the learning application$")
 	public void i_have_launch_the_learning_application() throws Throwable {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\AbhishekMishra\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\AbhishekMishra\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 	}
@@ -133,7 +131,7 @@ public class Excel_stepdefinations {
 
 	@Then("^I have enter the course name$")
 	public void i_have_enter_the_course_name() throws Throwable {
-		driver.findElement(By.id("title")).sendKeys(Wrapper.getDataFromExcel(2, 0));
+		driver.findElement(By.id("title")).sendKeys(Selenium.getDataFromExcel(2, 0));
 	}
 
 	@Then("^I have click on advanced setting$")
@@ -144,18 +142,18 @@ public class Excel_stepdefinations {
 	@Then("^I have entered category list$")
 	public void i_have_entered_category_list() throws Throwable {
 		driver.findElement(By.xpath("(//*[@class=\"filter-option\"])[1]")).click();
-		driver.findElement(By.xpath("(//input[@class='form-control'])[2]")).sendKeys(Wrapper.getDataFromExcel(2, 1));
+		driver.findElement(By.xpath("(//input[@class='form-control'])[2]")).sendKeys(Selenium.getDataFromExcel(2, 1));
 	}
 
 	@Then("^I have entered the course code$")
 	public void i_have_entered_the_course_code() throws Throwable {
-		driver.findElement(By.id("add_course_wanted_code")).sendKeys(Wrapper.getDataFromExcel(2, 2));
+		driver.findElement(By.id("add_course_wanted_code")).sendKeys(Selenium.getDataFromExcel(2, 2));
 	}
 
 	@Then("^I have entered the language$")
 	public void i_have_entered_the_language() throws Throwable {
 		driver.findElement(By.xpath("(//*[@class=\"filter-option\"])[2]")).click();
-		driver.findElement(By.xpath("(//input[@class='form-control'])[4]")).sendKeys(Wrapper.getDataFromExcel(2, 3));
+		driver.findElement(By.xpath("(//input[@class='form-control'])[4]")).sendKeys(Selenium.getDataFromExcel(2, 3));
 	}
 
 	@Then("^I have click on create a course button$")

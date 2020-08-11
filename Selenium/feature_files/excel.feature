@@ -3,7 +3,7 @@ Feature: To automate the Registration & To verify application allows teacher to 
   I want to use this template for my feature file
 
   @exceltc1
-  Scenario: To verify whether admin can add the user
+  Scenario: To verify whether administrator can add the user
     Given I launch application
     Then I entered username "admin"
     And I entered password "admin@123"
@@ -13,7 +13,7 @@ Feature: To automate the Registration & To verify application allows teacher to 
     And I entered last name
     And I entered email id
     And I entered phone number
-    And I entered the Login credential textbox
+    And I entered the Login credential text-box
     Then I select password radio button
     And I entered password for user
     And I  select profile trainer
@@ -34,7 +34,7 @@ Feature: To automate the Registration & To verify application allows teacher to 
     And I have entered the course code
     And I have entered the language
     And I have click on create a course button
-    Then I have click on add add a introduction icon
+    Then I have click on add add a intro icon
     And I have entered the valid credential
     And I have click save intro text
     Then I have verified message
