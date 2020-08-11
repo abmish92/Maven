@@ -5,7 +5,7 @@ Feature: To automate the Registration & To verify whether application allows tea
   @Registration
   Scenario: To verify whether administrator can add the user
     Given I launch the application
-    Then I entered the user name "admin"
+    Then I entered the username "admin"
     And I entered the password "admin@123"
     Then I click the submit button
     When I click on add user link
